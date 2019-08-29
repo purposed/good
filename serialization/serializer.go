@@ -6,7 +6,8 @@ import (
 )
 
 var formatMap = map[Format]FormatSerializer{
-	JSON: &JSONSerializer{},
+	JSON:    &JSONSerializer{},
+	MsgPack: &MsgpackSerializer{},
 }
 
 // Marshal dumps the struct to bytes in the correct format.
